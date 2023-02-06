@@ -7,13 +7,13 @@ importers:
 
   ../../apps/cli:
     specifiers:
+      '@borealing/figma-device-screenshot-server': workspace:*
       '@types/node': ^18.11.18
       commander: ^10.0.0
-      figma-device-screenshot-server: workspace:*
       typescript: ^4.9.5
     dependencies:
+      '@borealing/figma-device-screenshot-server': link:../../libs/server
       commander: 10.0.0
-      figma-device-screenshot-server: link:../../libs/server
     devDependencies:
       '@types/node': 18.11.19
       typescript: 4.9.5
@@ -40,20 +40,20 @@ importers:
 
   ../../libs/server:
     specifiers:
+      '@borealing/figma-device-screenshot-adb': workspace:*
       '@types/cors': ^2.8.13
       '@types/express': ^4.17.16
       '@types/node': ^18.11.18
       buffer-image-size: ^0.6.4
       cors: ^2.8.5
       express: ^4.18.2
-      figma-device-screenshot-adb: workspace:*
       image-size: ^1.0.2
       typescript: ^4.9.5
     dependencies:
+      '@borealing/figma-device-screenshot-adb': link:../adb
       buffer-image-size: 0.6.4
       cors: 2.8.5
       express: 4.18.2
-      figma-device-screenshot-adb: link:../adb
       image-size: 1.0.2
     devDependencies:
       '@types/cors': 2.8.13

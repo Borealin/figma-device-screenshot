@@ -1,5 +1,5 @@
 {
-  "name": "figma-device-screenshot-adb",
+  "name": "@borealing/figma-device-screenshot-adb",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",

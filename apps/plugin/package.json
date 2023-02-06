@@ -1,5 +1,5 @@
 {
-  "name": "figma-device-screenshot-plugin",
+  "name": "@borealing/figma-device-screenshot-plugin",
   "version": "1.0.0",
   "description": "View a screenshot of your device in Figma",
   "scripts": {
