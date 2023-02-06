@@ -6,8 +6,8 @@
   "scripts": {
     "build": "npx tsc"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "borealin",
+  "license": "MIT",
   "dependencies": {
     "buffer-image-size": "^0.6.4",
     "cors": "^2.8.5",

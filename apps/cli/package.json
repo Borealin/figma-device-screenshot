@@ -8,8 +8,8 @@
     "watch": "npx tsc -w"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "borealin",
+  "license": "MIT",
   "dependencies": {
     "commander": "^10.0.0",
     "figma-device-screenshot-server": "workspace:*"

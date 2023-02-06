@@ -397,19 +397,23 @@
     // }
     {
       "packageName": "figma-device-screenshot-adb",
-      "projectFolder": "libs/adb"
+      "projectFolder": "libs/adb",
+      "shouldPublish": true
     },
     {
       "packageName": "figma-device-screenshot-server",
-      "projectFolder": "libs/server"
+      "projectFolder": "libs/server",
+      "shouldPublish": true
     },
     {
       "packageName": "figma-device-screenshot-cli",
-      "projectFolder": "apps/cli"
+      "projectFolder": "apps/cli",
+      "shouldPublish": true
     },
     {
       "packageName": "figma-device-screenshot-plugin",
-      "projectFolder": "apps/plugin"
+      "projectFolder": "apps/plugin",
+      "shouldPublish": false
     }
   ]
 }
