@@ -1,0 +1,21 @@
+{
+  "name": "figma-device-screenshot-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "npx tsc",
+    "watch": "npx tsc -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^10.0.0",
+    "figma-device-screenshot-server": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "typescript": "^4.9.5"
+  }
+}

@@ -1,0 +1,50 @@
+<select id="devices" />
+<script>
+  const select = document.getElementById('devices')
+  window.onmessage = async (event) => {
+    const pluginMessage = event.data.pluginMessage;
+    if (pluginMessage.type === "getDevice") {
+      console.log(pluginMessage.data)
+      const currentDevice = pluginMessage.data
+      const devices = await getDevice(pluginMessage.api);
+      for (x in select.options) {
+        select.remove(0)
+      }
+      const dummyOption = document.createElement('option')
+      dummyOption.value = ''
+      dummyOption.text = ''
+      select.appendChild(dummyOption)
+      devices.forEach(device => {
+        const option = document.createElement('option')
+        option.value = JSON.stringify(device)
+        option.text = `model: ${device.model} | name: ${device.name}`
+        select.appendChild(option)
+      })
+      let found = false
+      for (let x = 0; x < select.options.length; x++) {
+        try {
+          if (JSON.parse(select.options[x].value).name === currentDevice.name) {
+            select.options[x].selected = true
+            found = true
+          }
+        } catch (e) {
+          console.log(e)
+        }
+      }
+      if (!found) {
+        select.options[0].selected = true
+      }
+    }
+  }
+  select.addEventListener('change', (event) => {
+    if (event.target.value === '') return
+    window.parent.postMessage({ pluginMessage: { type: 'setDevice', data: JSON.parse(event.target.value) } }, '*')
+  })
+  async function getDevice(api) {
+    const devicesRes = await fetch(`${api}/adb/devices`, {
+      method: "GET",
+    });
+    const devices = await devicesRes.json();
+    return devices;
+  }
+</script>

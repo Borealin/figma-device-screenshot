@@ -1,0 +1,10 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build cli",
+            "type": "shell",
+            "command": "rush build -t figma-device-screenshot-cli",
+        }
+    ]
+}

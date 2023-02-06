@@ -1,0 +1,17 @@
+{
+  "name": "figma-device-screenshot-plugin",
+  "version": "1.0.0",
+  "description": "View a screenshot of your device in Figma",
+  "scripts": {
+    "build": "esbuild src/code/index.tsx --bundle --outfile=dist/code.js --target=es6",
+    "watch": "npm run build -- --watch"
+  },
+  "author": "",
+  "license": "",
+  "devDependencies": {
+    "@figma/plugin-typings": "^1.58.0",
+    "@figma/widget-typings": "^1.5.0",
+    "esbuild": "^0.17.5",
+    "typescript": "^4.9.5"
+  }
+}
