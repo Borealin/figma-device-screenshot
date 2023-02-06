@@ -1,0 +1,17 @@
+{
+  "name": "@borealing/figma-device-screenshot-adb",
+  "entries": [
+    {
+      "version": "1.0.1",
+      "tag": "@borealing/figma-device-screenshot-adb_v1.0.1",
+      "date": "Mon, 06 Feb 2023 09:20:37 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "init adb utils"
+          }
+        ]
+      }
+    }
+  ]
+}

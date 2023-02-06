@@ -1,0 +1,22 @@
+{
+  "name": "@borealing/figma-device-screenshot-cli",
+  "entries": [
+    {
+      "version": "1.0.1",
+      "tag": "@borealing/figma-device-screenshot-cli_v1.0.1",
+      "date": "Mon, 06 Feb 2023 09:20:37 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "init cli utils"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@borealing/figma-device-screenshot-server\" to `1.0.1`"
+          }
+        ]
+      }
+    }
+  ]
+}
