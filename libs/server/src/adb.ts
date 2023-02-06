@@ -1,6 +1,6 @@
 import { Express } from "express";
 import { ServerRegistry } from ".";
-import { adbCommand } from "figma-device-screenshot-adb";
+import { adbCommand } from "@borealing/figma-device-screenshot-adb";
 import { imagePath } from "./static-image";
 import sizeOf from "buffer-image-size";
 import imageSize from "image-size";
