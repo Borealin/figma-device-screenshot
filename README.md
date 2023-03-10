@@ -9,7 +9,7 @@ npm install -g figma-device-screenshot-cli
 ```
 ### Run the server
 ```
-figma-device-screenshot server
+figma-device-screenshot server [-p <port>]
 ```
 
 ## Build
