@@ -11,7 +11,9 @@
             "preLaunchTask": "Build cli",
             "program": "${workspaceFolder}/apps/cli/dist/index.js",
             "args": [
-                "server"
+                "server",
+                "-p",
+                "5000"
             ],
             "outFiles": [
                 "${workspaceFolder}/**/dist/**/*.js",

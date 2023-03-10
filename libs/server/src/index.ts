@@ -3,7 +3,6 @@ import { RootServerRegistry } from "./root";
 import { StaticImageServerRegistry } from "./static-image";
 import { ADBServerRegistry } from "./adb";
 import { CorsServerRegistry } from "./cors";
-import { JSONServerRegistry } from "./json";
 export type ServerRegistry = {
   handle: (program: Express) => Promise<Express> | Express;
 };
@@ -25,6 +24,6 @@ const createApp = async () => {
 export const startServer = async (port: number = 3000) => {
   const app = await createApp();
   app.listen(port, () => {
-    console.log(`Example app listening on port ${port}!`);
+    console.log(`Figma device screenshot server is listening on port ${port}!`);
   });
 };

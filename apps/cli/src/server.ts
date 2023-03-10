@@ -6,8 +6,10 @@ export const ServerCommand: CommandRegistry = {
     program
       .command("server")
       .description("Start the server")
-      .action(async () => {
-        await startServer();
+      .option("-p, --port <port>", "Port to listen on", "3000")
+      .action(async (options, command) => {
+        const port = options.port ? parseInt(options.port) : 3000;
+        await startServer(port);
       });
 
     return program;
