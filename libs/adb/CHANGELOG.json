@@ -2,6 +2,18 @@
   "name": "@borealing/figma-device-screenshot-adb",
   "entries": [
     {
+      "version": "1.0.3",
+      "tag": "@borealing/figma-device-screenshot-adb_v1.0.3",
+      "date": "Fri, 10 Mar 2023 12:07:50 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "add custom error handle"
+          }
+        ]
+      }
+    },
+    {
       "version": "1.0.2",
       "tag": "@borealing/figma-device-screenshot-adb_v1.0.2",
       "date": "Fri, 10 Mar 2023 10:47:18 GMT",

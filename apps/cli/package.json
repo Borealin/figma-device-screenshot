@@ -1,6 +1,6 @@
 {
   "name": "@borealing/figma-device-screenshot-cli",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A CLI tool for providing ADB functionality through API",
   "homepage": "https://https://github.com/Borealin/figma-device-screenshot",
   "main": "dist/index.js",

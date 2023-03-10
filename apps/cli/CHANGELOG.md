@@ -1,6 +1,11 @@
 # Change Log - @borealing/figma-device-screenshot-cli
 
-This log was last generated on Fri, 10 Mar 2023 10:47:18 GMT and should not be manually modified.
+This log was last generated on Fri, 10 Mar 2023 12:07:50 GMT and should not be manually modified.
+
+## 1.0.5
+Fri, 10 Mar 2023 12:07:50 GMT
+
+_Version update only_
 
 ## 1.0.4
 Fri, 10 Mar 2023 10:47:18 GMT

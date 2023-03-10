@@ -1,6 +1,6 @@
 # Figma Device Screenshot Widget
 This repository contains a Figma plugin that allows you to take screenshots on your Android devices and place into a Figma Image.
-## Usage
+## Preparation
 ### Install the plugin
 Install from https://www.figma.com/community/widget/1204364503317721969
 ### Install the cli
@@ -11,6 +11,7 @@ npm install -g figma-device-screenshot-cli
 ```
 figma-device-screenshot server [-p <port>]
 ```
+## Usage
 
 ## Build
 To install dependencies, run:
