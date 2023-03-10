@@ -1,5 +1,5 @@
 import { ADBGlobalParams, execAdb } from "./global";
-type Device = {
+export type Device = {
   name: string;
   usb?: string;
   product?: string;

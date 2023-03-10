@@ -2,7 +2,10 @@ import { fileCommands, handleFile } from "./file";
 import { generalCommands, handleGeneral } from "./general";
 import { HandleParams, HandleReturn } from "./global";
 import { shellCommands, handleShell } from "./shell";
-
+export * from "./file";
+export * from "./general";
+export * from "./global";
+export * from "./shell";
 const allADBCommandImpls = {
   ...generalCommands,
   ...shellCommands,

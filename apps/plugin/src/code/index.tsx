@@ -1,6 +1,7 @@
 // This widget will open an Iframe window with buttons to show a toast message and close the window.
 
 import { pluginMessage } from "./plugin-call";
+import { CustomError, Result } from "./result";
 
 const { widget } = figma;
 const {
@@ -99,7 +100,12 @@ function Widget() {
       const devicesRes = await fetch(`${api}/adb/devices`, {
         method: "GET",
       });
-      let newDevices: DeviceData[] = await devicesRes.json();
+      const rawRes: Result<DeviceData[]> = await devicesRes.json();
+      if ("error" in rawRes) {
+        throw rawRes.error;
+      }
+      console.log("rawRes", rawRes);
+      let newDevices = rawRes.data;
       if (newDevices.length === 0) {
         newDevices = [devicePlaceholder];
       }
@@ -107,9 +113,13 @@ function Widget() {
         newDevices.find((item) => item.name === device.name) ?? newDevices[0];
       setDevices(newDevices);
       await selectDevice(targetDevice);
-    } catch (e) {
+    } catch (e: any) {
       console.log(e);
-      await alertServerShouldOpen()
+      if (e.msg) {
+        figma.notify(e.msg);
+      } else {
+        await alertServerShouldOpen();
+      }
     }
   };
 
@@ -126,22 +136,33 @@ function Widget() {
           method: "GET",
         }
       );
-      const screenshot = await screenshotRes.json();
-      const { bitmap, height, width } = screenshot;
+      const screenshot: Result<{
+        width: number;
+        height: number;
+        bitmap: string;
+      }> = await screenshotRes.json();
+      if ("error" in screenshot) {
+        throw screenshot.error;
+      }
+      const { bitmap, height, width } = screenshot.data;
       setImageData({
         src: bitmap,
         width: 375,
         height: (height / width) * 375,
       });
-    } catch (e) {
+    } catch (e: any) {
       console.log(e);
-      await alertServerShouldOpen()
+      if (e.msg) {
+        figma.notify(e.msg);
+      } else {
+        await alertServerShouldOpen();
+      }
     }
   };
 
   const alertServerShouldOpen = () => {
     return new Promise<DeviceData>((resolve) => {
-      figma.showUI(__html__)
+      figma.showUI(__html__);
       pluginMessage("setAPI", api, {});
       figma.ui.onmessage = (msg) => {
         if (msg.type === "setDevice") {
@@ -151,7 +172,7 @@ function Widget() {
           resolve(msg.data);
         }
       };
-    })
+    });
   };
 
   return (
