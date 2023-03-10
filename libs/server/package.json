@@ -9,11 +9,11 @@
   "author": "borealin",
   "license": "MIT",
   "dependencies": {
+    "@borealing/figma-device-screenshot-adb": "workspace:*",
     "buffer-image-size": "^0.6.4",
     "cors": "^2.8.5",
     "express": "^4.18.2",
-    "image-size": "^1.0.2",
-    "@borealing/figma-device-screenshot-adb": "workspace:*"
+    "image-size": "^1.0.2"
   },
   "devDependencies": {
     "@types/cors": "^2.8.13",
