@@ -1,6 +1,6 @@
 {
   "name": "@borealing/figma-device-screenshot-adb",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "homepage": "https://https://github.com/Borealin/figma-device-screenshot",
   "main": "dist/index.js",

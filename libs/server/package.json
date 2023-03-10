@@ -1,6 +1,6 @@
 {
   "name": "@borealing/figma-device-screenshot-server",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "main": "dist/index.js",
   "homepage": "https://https://github.com/Borealin/figma-device-screenshot",

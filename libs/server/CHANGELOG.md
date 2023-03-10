@@ -1,6 +1,13 @@
 # Change Log - @borealing/figma-device-screenshot-server
 
-This log was last generated on Fri, 10 Mar 2023 10:11:13 GMT and should not be manually modified.
+This log was last generated on Fri, 10 Mar 2023 10:47:18 GMT and should not be manually modified.
+
+## 1.0.4
+Fri, 10 Mar 2023 10:47:18 GMT
+
+### Patches
+
+- add homepage
 
 ## 1.0.3
 Fri, 10 Mar 2023 10:11:13 GMT

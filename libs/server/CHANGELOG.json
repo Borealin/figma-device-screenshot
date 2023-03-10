@@ -2,6 +2,23 @@
   "name": "@borealing/figma-device-screenshot-server",
   "entries": [
     {
+      "version": "1.0.4",
+      "tag": "@borealing/figma-device-screenshot-server_v1.0.4",
+      "date": "Fri, 10 Mar 2023 10:47:18 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "add homepage"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@borealing/figma-device-screenshot-adb\" to `1.0.2`"
+          }
+        ]
+      }
+    },
+    {
       "version": "1.0.3",
       "tag": "@borealing/figma-device-screenshot-server_v1.0.3",
       "date": "Fri, 10 Mar 2023 10:11:13 GMT",
