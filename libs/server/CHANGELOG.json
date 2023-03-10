@@ -2,6 +2,18 @@
   "name": "@borealing/figma-device-screenshot-server",
   "entries": [
     {
+      "version": "1.0.3",
+      "tag": "@borealing/figma-device-screenshot-server_v1.0.3",
+      "date": "Fri, 10 Mar 2023 10:11:13 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "fix typo"
+          }
+        ]
+      }
+    },
+    {
       "version": "1.0.2",
       "tag": "@borealing/figma-device-screenshot-server_v1.0.2",
       "date": "Mon, 06 Feb 2023 10:18:44 GMT",
