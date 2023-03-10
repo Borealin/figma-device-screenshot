@@ -1,1 +1,15 @@
-<body/>
+<p>
+    If CLI is installed, check if your API URL (could be changed in widget bottom) is right: <br />
+    <a id="api" style="color:red"></a><br />
+    If CLI is not installed, install it by following repo README:<br />
+    <a href="https://github.com/Borealin/figma-device-screenshot">Github Link</a> (Click with command or ctrl)
+</p>
+<script>
+    const api = document.getElementById('api')
+    window.onmessage = async (event) => {
+        const pluginMessage = event.data.pluginMessage;
+        if (pluginMessage.type === "setAPI") {
+            api.textContent = pluginMessage.api
+        }
+    }
+</script>

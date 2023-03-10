@@ -1,5 +1,7 @@
 // This widget will open an Iframe window with buttons to show a toast message and close the window.
 
+import { pluginMessage } from "./plugin-call";
+
 const { widget } = figma;
 const {
   useSyncedState,
@@ -93,17 +95,22 @@ function Widget() {
   };
 
   const fetchDevices = async () => {
-    const devicesRes = await fetch(`${api}/adb/devices`, {
-      method: "GET",
-    });
-    let newDevices: DeviceData[] = await devicesRes.json();
-    if (newDevices.length === 0) {
-      newDevices = [devicePlaceholder];
+    try {
+      const devicesRes = await fetch(`${api}/adb/devices`, {
+        method: "GET",
+      });
+      let newDevices: DeviceData[] = await devicesRes.json();
+      if (newDevices.length === 0) {
+        newDevices = [devicePlaceholder];
+      }
+      const targetDevice =
+        newDevices.find((item) => item.name === device.name) ?? newDevices[0];
+      setDevices(newDevices);
+      await selectDevice(targetDevice);
+    } catch (e) {
+      console.log(e);
+      await alertServerShouldOpen()
     }
-    const targetDevice =
-      newDevices.find((item) => item.name === device.name) ?? newDevices[0];
-    setDevices(newDevices);
-    await selectDevice(targetDevice);
   };
 
   const fetchImage = async (selectedDevice: DeviceData = device) => {
@@ -128,7 +135,23 @@ function Widget() {
       });
     } catch (e) {
       console.log(e);
+      await alertServerShouldOpen()
     }
+  };
+
+  const alertServerShouldOpen = () => {
+    return new Promise<DeviceData>((resolve) => {
+      figma.showUI(__html__)
+      pluginMessage("setAPI", api, {});
+      figma.ui.onmessage = (msg) => {
+        if (msg.type === "setDevice") {
+          console.log(JSON.stringify(msg.data));
+          setDevice(msg.data);
+          figma.ui.close();
+          resolve(msg.data);
+        }
+      };
+    })
   };
 
   return (
