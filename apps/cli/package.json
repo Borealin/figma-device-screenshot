@@ -14,8 +14,8 @@
   "author": "borealin",
   "license": "MIT",
   "dependencies": {
-    "commander": "^10.0.0",
-    "@borealing/figma-device-screenshot-server": "workspace:*"
+    "@borealing/figma-device-screenshot-server": "workspace:*",
+    "commander": "^10.0.0"
   },
   "devDependencies": {
     "@types/node": "^18.11.18",
