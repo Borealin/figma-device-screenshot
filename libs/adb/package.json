@@ -1,6 +1,6 @@
 {
   "name": "@borealing/figma-device-screenshot-adb",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A simple tool to perform ADB command over Node.js",
   "homepage": "https://github.com/Borealin/figma-device-screenshot",
   "main": "dist/index.js",

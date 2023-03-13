@@ -1,6 +1,13 @@
 # Change Log - @borealing/figma-device-screenshot-adb
 
-This log was last generated on Fri, 10 Mar 2023 12:07:50 GMT and should not be manually modified.
+This log was last generated on Mon, 13 Mar 2023 02:45:54 GMT and should not be manually modified.
+
+## 1.0.4
+Mon, 13 Mar 2023 02:45:54 GMT
+
+### Patches
+
+- Add README
 
 ## 1.0.3
 Fri, 10 Mar 2023 12:07:50 GMT
