@@ -6,9 +6,12 @@ Which is useful when comparing designs with real devices.
 ## Preparation
 ### Install the plugin
 Install from https://www.figma.com/community/widget/1204364503317721969
-### Install the cli
+### Install Node (Skip if you already have Node installed)
+Install from [Node.js Official Page](https://nodejs.org/)
+### Install the cli from npm
+[npmjs link](https://www.npmjs.com/package/@borealing/figma-device-screenshot-cli)
 ```
-npm install -g figma-device-screenshot-cli
+npm install -g @borealing/figma-device-screenshot-cli
 ```
 ### Run the server
 ```

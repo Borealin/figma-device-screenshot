@@ -3,7 +3,7 @@
   "version": "1.0.5",
   "description": "",
   "main": "dist/index.js",
-  "homepage": "https://https://github.com/Borealin/figma-device-screenshot",
+  "homepage": "https://github.com/Borealin/figma-device-screenshot",
   "scripts": {
     "build": "npx tsc"
   },
