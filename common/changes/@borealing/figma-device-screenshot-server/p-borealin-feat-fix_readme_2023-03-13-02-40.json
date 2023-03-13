@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@borealing/figma-device-screenshot-server",
+      "comment": "",
+      "type": "none"
+    }
+  ],
+  "packageName": "@borealing/figma-device-screenshot-server"
+}

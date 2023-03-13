@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@borealing/figma-device-screenshot-adb",
+      "comment": "",
+      "type": "none"
+    }
+  ],
+  "packageName": "@borealing/figma-device-screenshot-adb"
+}
